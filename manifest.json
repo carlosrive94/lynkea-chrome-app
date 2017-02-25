@@ -4,9 +4,19 @@
 	"manifest_version": 2,
 	"author": "Carlos Rivero",
 	"permissions": [
-		"contextMenus"
+		"contextMenus",
+		"identity"
 	],
 	"background": {
-		"scripts": ["sample.js"]
-	}
+		"scripts": ["firebase.js","credentials.js","script.js"]
+	},
+	"content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+	"oauth2": {
+		"client_id": "964830719483-caq1puj56pao3rak7mq6vv64nhok7050.apps.googleusercontent.com",
+		"scopes": [
+			"https://www.googleapis.com/auth/userinfo.email",
+			"https://www.googleapis.com/auth/userinfo.profile"
+		]
+	},
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAubCVT3N7FicH5PsSM/BlFF202puhf4m57nPcWc5lC4gOUy5icuMG+XNlWjWwPRug8/djqeB+D4NAIJTMmnSxBQAKu0pwYDvBt1jBDbgYnMCVoFhrq2lGkfbgPiKEDKdZK+xhlHgu0BRR9eq1AihYgRjvq33uqYDXQ5iMBIdfhQhkpoQmGDX6kb6gg6vD056F1qvZgF1/8RFTeBgyv/GrGlcw/i74Fkj5c7hqjDPjelmqT3IDHwPhzbMotGZBtvTi7raOmgTXOsZkCdUNMr85bGb5KGjgs+N2vRd7/R8piiuOTdAQLfh7oztO5Fh2u6rhbQ8PVsaWMNiVBBn6/qOujQIDAQAB"
 }
